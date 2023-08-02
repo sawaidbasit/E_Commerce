@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - E-Commerce Website</title>
+  <link rel="stylesheet" href="myProfile.css">
+
+<style>
+    /* Add CSS styles for the header and footer, e.g., background color, padding, font styles, etc. */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  /* Add styles for the header, such as background color, height, logo, navigation, etc. */
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Add CSS styles for the profile section, order history, saved addresses, and edit profile sections, as in the previous examples */
+
+/* Responsive design for mobile devices */
+
+@media screen and (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Additional responsive styles for the other sections, as needed */
+}
+
+footer {
+  /* Add styles for the footer, such as background color, padding, font styles, etc. */
+}
+
+
+</style>
+
+</head>
+
+<body>
+   
+  <section id="header">
+    <a href="#"> <img src="images/logo.png" class="logo" alt=""> </a>
+
+    <div>
+        <ul id="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Dashboard.html">My Profile</a></li>
+           <li id="lg-bag"><a href="cart.html"> <i class="fa-solid fa-bag-shopping"></i> </a> </li>
+        <a href="login.html"><button class="nav-btn"> <i class="fa fa-fw fa-user"></i> Login</button> </a>
+           <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+    </div>
+
+    <div id="mobile">
+         <i class="fa-solid fa-bag-shopping"></i> </a>
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+
+</section>
+  
+    <main>
+      <div class="profile-section">
+        <div class="profile-picture">
+            <img src="images/sawad-img-fotor-2023080117477.png" alt="Profile Picture" style="max-width: 10%;">
+          </div>
+          <div class="profile-details">
+            <h2 id="user_name">John Doe</h2>
+            <p id="user_email">Email: john.doe@example.com</p>
+            <p>Address: 1234 Main Street, City, Country</p>
+            <p>Phone: +1 123-456-7890</p>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">Instagram</a>
+            </div>
+          </div>
+        </div>
+  
+      <div class="order-history">
+        <section id="product1" class="section-p1">
+          <h2>My Orders</h2>
+        <div id="pro-container">
+          <!-- <li>
+            <p id="order1">Order #001</p> 
+            <p id="order1date">Date: 2023-07-31</p> 
+            <p id="order1tt"> Total: $100.00</p>
+            <p id="order1SD">Status: Delivered</p>
+          </li> -->
+          <!-- Add more order history items here -->
+        </div>
+        <button id="click" style="background-color: #088178;">Add Product</button>
+      </section>
+
+          </div>
+  
+      <div class="saved-addresses">
+        <h3>Saved Addresses</h3>
+        <ul>
+          <li>
+            <p>Home Address:</p>
+            <p>1234 Main Street, City, Country</p>
+          </li>
+          <li>
+            <p>Office Address:</p>
+            <p>5678 Business Avenue, City, Country</p>
+          </li>
+          <!-- Add more saved addresses here -->
+        </ul>
+      </div>      
+  
+      <div class="edit-profile">
+        <h3 >Edit Profile Information</h3>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="user_name" name="name" value="SawaidBasit221@gmail.com">
+          
+          <label for="email">Email:</label>
+          <input type="email" id="user_email" name="email" value="john.doe@example.com">
+    
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" value="1234 Main Street, City, Country">
+    
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" value="+1 123-456-7890">
+    
+          <input type="submit" value="Save Changes">
+        </form>
+          </div>
+    </main>
+  
+    <footer>
+        <footer>
+            <div class="footer-container">
+              <div class="footer-column">
+                <h3>About Us</h3>
+                <p>E-commerce is the buying and selling of goods and services over the internet. It allows businesses to reach customers globally and provides convenience and accessibility for consumers.</p>
+                 </div>
+              <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Shipping Information</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h3>Stay Connected</h3>
+                <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Instagram</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-column">
+                <h3>Payment Methods</h3>
+                <ul class="payment-methods">
+                  <li><a href="#">Paypal</a></li>
+                  <li><a href="#">ATM Card</a></li>
+                  <li><a href="#">Sada Pay</a></li>
+                  
+                </ul>
+              </div>
+              
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2023 My Ecommerce Site. All Rights Reserved.</p>
+            </div>
+          </footer>    </footer>
+
+   <script src="ecommerce.js"></script>
+
+
+  </body>
+</html>
+
+</html>

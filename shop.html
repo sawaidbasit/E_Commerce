@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+
+
+    <style> 
+    * {
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+    font-family: 'sparten', sans-serif;
+}
+
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.normal {
+   font-size: 14px;
+   font-weight: 600;
+   padding: 15px 30px;
+   color: #000;
+   background-color: #fff;
+   border-radius: 4px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   transition: 0.2s;
+}
+
+.nav-btn {
+   font-size: 12px;
+   font-weight: 600;
+   padding: 11px 20px;
+   color: #cce7d0;
+   background-color: #088178;
+   border-radius: 4px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   transition: 0.2s;
+}
+
+.nav-btn:hover {
+   font-size: 12px;
+   font-weight: 600;
+   padding: 11px 20px;
+   color: #088178;
+   background-color: transparent;
+   border-radius: 4px;
+   cursor: pointer;
+   border: 2px solid #088178;
+   transition: 0.2s;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+ }
+
+body {
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.nav-btn {
+   font-size: 12px;
+   font-weight: 600;
+   padding: 11px 20px;
+   color: #cce7d0;
+   background-color: #088178;
+   border-radius: 4px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   transition: 0.2s;
+}
+
+.nav-btn:hover {
+   font-size: 12px;
+   font-weight: 600;
+   padding: 11px 20px;
+   color: #088178;
+   background-color: transparent;
+   border-radius: 4px;
+   cursor: pointer;
+   border: 2px solid #088178;
+   transition: 0.2s;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3 ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178 ;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+#hero {
+    background-image: url(images/hero-page.png);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 45% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h2 {
+    padding-bottom: 15px;
+    font-size: 40px;
+    color: #000;
+    font-weight: 700;
+}
+
+#hero h1 {
+    padding-bottom: 15px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #088178;
+}
+
+#hero p {
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #088178;
+    width: 40%;
+}
+
+#hero .normal {
+   font-size: 14px;
+   font-weight: 600;
+   padding: 13px 30px;
+   color: #E3E6F3;
+   background-color: #088178;
+   border-radius: 4px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   transition: 0.2s;
+}
+
+#hero .normal:hover {
+   font-size: 14px;
+   font-weight: 600;
+   padding: 13px 30px;
+   color: #088178;
+   background-color: transparent;
+   border-radius: 4px;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   border: 1px solid #088178;
+   transition: 0.2s;
+}
+
+#banner {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   text-align: center; 
+   background-image: url(images/b1.jpg);
+   width: 100%;
+   height: 40vh;
+   background-size: cover;
+   background-position: center;
+}
+
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0px ;
+}
+
+#banner h2 span {
+    color: #ef3636;
+}
+
+#banner button:hover {
+    background: #088178;
+    color: #fff;
+}
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+} 
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow:20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px; 
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i {
+    font-size: 12px;
+    color: #FFD500;
+}
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner3 {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   padding: 0px 80px;
+}
+
+#banner3 .banner-box {
+    display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: flex-start;
+   background-image: url(images/b7.jpg);
+   min-width: 20%;
+   height: 30vh;
+   background-size: cover;
+   background-position: center;
+   padding: 20px;
+   margin-bottom: 20px;
+}
+
+#banner3 .banner-box2 {
+    background-image: url(images/b10.jpg);
+}
+
+#banner3 .banner-box3 {
+    background-image: url(images/b6.jpg);
+}
+
+#banner3 .banner-box3 {
+    background-image: url(images/b17.jpg);
+}
+
+
+#banner3 h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3 {
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 15px;
+} 
+
+.section-p1 {
+    padding: 40px 80px ;
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 23%;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column ul {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.5;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: #777;
+  text-decoration: none;
+}
+
+.payment-methods {
+  padding: 0;
+  margin: 0;
+
+ 
+}
+
+.payment-methods li:last-child {
+  margin-right: 0;
+}
+
+
+.footer-column a:hover {
+  color: #000;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+
+
+@media (max-width:799px) {
+
+.section-p1 {
+    padding: 40px 40px;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+}
+
+#navbar.active{
+    right: 0px;
+}
+
+#navbar li {
+    margin-bottom: 25px;
+}
+
+#mobile{
+    display: flex;
+    align-items: center;
+}
+
+#mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+#close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+}
+
+#lg-bag {
+    display: none;
+}
+
+#hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+}
+
+@media (max-width: 477px) {
+  .section-p1 {
+        padding: 10px 30px;
+    }
+    
+    #header {
+        padding: 10px 30px;
+    }
+
+    #hero {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    #hero h2 {
+        font-size: 22px;
+        margin-top: 20rem;
+    }
+}
+
+
+</style>    
+
+</head>
+
+<body>
+  <section id="header">
+    <a href="#"> <img src="images/logo.png" class="logo" alt=""> </a>
+
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Dashboard.html">My Profile</a></li>        
+           <li id="lg-bag"><a href="cart.html"> <i class="fa-solid fa-bag-shopping"></i> </a> </li>
+           <a href="login.html"><button class="nav-btn"> <i class="fa fa-fw fa-user"></i> Login</button> </a>
+           <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+    </div>
+
+    <div id="mobile">
+         <i class="fa-solid fa-bag-shopping"></i> </a>
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+
+</section>
+
+<section id="hero">
+  <h2>Summer Collection</h2>
+  <h1>2023 New Collection</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi non, esse suscipit quam sequi molestias voluptatibus. Vel blanditiis, officiis quos, illum obcaecati dicta aliquid a, ducimus dolore eos amet aliquam!</p>
+  <button class="normal">Shop Now </button>
+</section>
+
+  <section id="banner" class="section-m1">
+    <h4 style="font-size: 20px; font-weight: 600;">Repair Services</h4>
+    <h2 style="font-weight: 700;">Up to <span>70% off</span> - All t-Shirts & Accesories</h2>
+    <button class="normal">Explore More</button>
+</section>
+
+<section id="banner3">
+    <div class="banner-box">
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+    </div>
+
+    <div class="banner-box banner-box2">
+        <h2> NEW FOOTWEAR COLLECTION</h2>
+        <h3>Spring / Summer 2023</h3>
+    </div>
+
+    <div class="banner-box banner-box3">
+        <h2>T-SHIRTS</h2>
+        <h3>New Trendy Prints</h3>
+    </div>  
+
+    <div class="banner-box banner-box4">
+        <h2>T-SHIRTS</h2>
+        <h3>New Trendy Prints</h3>
+    </div>  
+  </section>
+
+
+<section id="product1" class="section-p1">
+    <h2 style="font-size: 46px; line-height: 64px; color: #222; font-weight: 700;" > Popular This Week</h2>
+    <p style="font-size: 16px; color: #465b52;">Summer Collection New Modern Design</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="images/n1.jpg" alt="">
+            <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$70</h4>
+            </div>
+            <a href="#"> <i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>        
+        <div class="pro">
+            <img src="images/f2.jpg" alt="">
+            <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$70</h4>
+            </div>
+            <a href="#"> <i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+      
+        <div class="pro">
+            <img src="images/f2.jpg" alt="">
+            <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$70</h4>
+            </div>
+            <a href="#"> <i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+
+        <div class="pro">
+            <img src="images/f2.jpg" alt="">
+            <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$70</h4>
+            </div>
+            <a href="#"> <i class="fa-regular fa-cart-shopping cart"></i></a>
+        </div>
+    </section>
+
+    <section class="text-gray-600 body-font">
+        <h2 style="text-align: center; font-size: 46px; font-weight: 600; margin-bottom: 20pxr;">Upcoming Products </h2>
+        <p style="text-align: center;" > Summer Collection New Modern Design        </p>
+        <div class="container px-5 py-24 mx-auto flex flex-wrap" style= "padding-top: 3rem;">
+            <div class="flex flex-wrap md:-m-2 -m-1">
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/n1.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/n2.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/n3.jpg">
+              </div>
+            </div>
+            <div class="flex flex-wrap w-1/2">
+              <div class="md:p-2 p-1 w-full">
+                <img alt="gallery" class="w-full h-full object-cover object-center block" src="images/n4.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/n5.jpg">
+              </div>
+              <div class="md:p-2 p-1 w-1/2">
+                <img alt="gallery" class="w-full object-cover h-full object-center block" src="images/n6.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>E-commerce is the buying and selling of goods and services over the internet. It allows businesses to reach customers globally and provides convenience and accessibility for consumers.</p>
+             </div>
+          <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Shipping Information</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Stay Connected</h3>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Payment Methods</h3>
+            <ul class="payment-methods">
+              <li><a href="#">Paypal</a></li>
+              <li><a href="#">ATM Card</a></li>
+              <li><a href="#">Sada Pay</a></li>
+              
+            </ul>
+          </div>
+          
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 My Ecommerce Site. All Rights Reserved.</p>
+        </div>
+      </footer>
+      
+      
+        
+         <script src="app.js"></script>   
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
